@@ -15,6 +15,7 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
   outputs = { self, nixpkgs, hyprland, hyprland-plugins, home-manager, hyprpanel, ... }@inputs: 
     let

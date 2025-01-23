@@ -3,6 +3,7 @@
   # ./hyprpanel/default.nix
     ./asuraLaptop/hyprland/default.nix
     ./asuraLaptop/hyprpanel/default.nix
+    ./asuraLaptop/wofi/default.nix
   ];
 
   home.username = "asura";
@@ -10,6 +11,7 @@
   home.packages = with pkgs; [
     hyprpanel
     wofi
+    inputs.zen-browser.packages.${pkgs.system}.default
   ];
 
     #git
