@@ -189,12 +189,9 @@
   # Allow unfree packages (required for NVIDIA drivers)
   nixpkgs.config.allowUnfree = true;
 
-  #for git 
-  # programs.ssh = {
-  #   enableAskPassword = true;
-  #   askPassword = "${pkgs.lxqt.lxqt-openssh-askpass}/bin/lxqt-openssh-askpass";
-  # };
-  # programs.seahorse.enable = true;
+  programs.ssh = {
+    startAgent = true;
+  };
 
 
   # Fonts configuration

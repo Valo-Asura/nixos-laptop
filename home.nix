@@ -13,15 +13,15 @@
   ];
 
     #git
-    # programs.git = {
-    #   enable = true;
-    #   userName = "Valo-Asura";
-    #   userEmail = "vimalranghar016@gmail.com";
-    #   extraConfig = {
-    #     init.defaultBranch = "main";
-    #     safe.directory = "/etc/nixos/";
-    #   };
-    # };
+    programs.git = {
+      enable = true;
+      userName = "Valo-Asura";
+      userEmail = "vimalranghar016@gmail.com";
+      extraConfig = {
+        init.defaultBranch = "main";
+        safe.directory = "/etc/nixos/";
+      };
+    };
   
 
    home.pointerCursor = {
