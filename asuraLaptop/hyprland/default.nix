@@ -35,12 +35,7 @@ in {
     cmake
     cpio
   ];
-  #inputs.hyprland.packages."${pkgs.system}".hyprland;
-
-  # services.displayManager = {
-  #   defaultSession = "hyprland";  # Or whatever session you want to use
-  # };
-
+  
   wayland.windowManager.hyprland = {
     #desktop = "Exec=dbus-launch --sh-syntax --exit-with-session Hyprland";
     enable = true;

@@ -37,6 +37,7 @@
           ./asuraLaptop/modules/system.nix
           ./asuraLaptop/modules/users.nix
           ./asuraLaptop/modules/locale.nix
+          ./asuraLaptop/modules/tuigreet.nix
           ./hardware-configuration.nix
           home-manager.nixosModules.home-manager
           {

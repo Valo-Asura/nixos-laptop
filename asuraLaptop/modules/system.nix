@@ -6,7 +6,6 @@
   environment.systemPackages = with pkgs; [
     
       home-manager
-
       # Essential Utilities
       fastfetch fzf
       
@@ -28,7 +27,7 @@
       waybar swaybg swww
       wlogout 
       xdg-utils swaylock kdePackages.qt6ct 
-      networkmanager
+      networkmanager ly # for login display manager tui ly
       
       # Multimedia
       playerctl vlc
@@ -74,12 +73,17 @@
 
 
   #hyprland
-  # programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-  # programs.hyprland.enable = true;
+  #programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+  #programs.hyprland.enable = true;
  
-  # services.displayManager = {
-  #   defaultSession = "hyprland";  # Or whatever session you want to use
-  # };
+  #login manager
+  services.displayManager.enable = true;
+  services.xserver = {
+    enable = true;
+    displayManager = {
+      gdm.enable = true;  # Use GDM as fallback
+    };
+  };
 
   #ags
   nixpkgs.overlays = [
@@ -91,10 +95,10 @@
     })
   ];
 
-    #enable upower
-    services.upower.enable = true;
+  #enable upower
+  services.upower.enable = true;
 
-  services.blueman.enable = true;  # Bluetooth support
+  services.blueman.enable = true;  # Bluetooth support for hyprpanel
   hardware.bluetooth.enable = true;
   services.dbus.enable = true;
   
@@ -134,23 +138,15 @@
     platformTheme = "qt6ct";
     style = "Adwaita-dark";  
   };
-  # XDG Portals
-  # xdg.portal = {
-  #   enable = true;
-  #   wlr.enable = true;
-  #   extraPortals = [
-  #     pkgs.xdg-desktop-portal-hyprland 
-  #     pkgs.xdg-desktop-portal-gtk
-  #   ];
-  # };
   
   # Additional Services
   services = {
     udisks2.enable = true;
     gvfs.enable = true;
+    power-profiles-daemon.enable = true;
   };
   
-  # User-level Udiskie Service
+  #Udiskie Service
   systemd.user.services.udiskie = {
     description = "Udiskie Daemon";
     wantedBy = [ "default.target" ];
