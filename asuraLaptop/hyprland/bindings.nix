@@ -15,7 +15,7 @@
       "$mainMod, E, exec, ${pkgs.telegram-desktop}/bin/telegram-desktop" # Telegram
       "$mainMod, W, exec, pkill hyprpanel || hyprpanel" # Hyprpanel
       "ALT, TAB, hyprexpo:expo, toggle" 
-      "ctrl, l, exec, ${pkgs.swaylock}/bin/swaylock -i ~/.config/hypr/lock-images/lockscreen.png --ignore-empty-password --color=000000 --scaling=center" # Lock screen
+      "ctrl, l, exec, ${pkgs.swaylock}/bin/swaylock -i /etc/nixos/asuraLaptop/hyprland/lock-images/lockscreen.png --ignore-empty-password --color=000000 --scaling=center --show-failed-attempts" # Lock screen
 
       "$shiftMod,C, exec, clipboard" # Clipboard picker with wofi
       "$shiftMod,E, exec, ${pkgs.wofi-emoji}/bin/wofi-emoji" # Emoji picker with wofi
