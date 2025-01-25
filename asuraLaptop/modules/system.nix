@@ -10,7 +10,7 @@
       fastfetch fzf
       
       # Terminal
-      kitty fish
+      kitty zsh superfile #fancy file manager
       
       # System Tools
       polkit lxqt.lxqt-policykit
@@ -53,6 +53,7 @@
       #ags
       ags
       gtksourceview3
+      bun
       
       # Development
       vscode
