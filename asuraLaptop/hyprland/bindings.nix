@@ -5,7 +5,7 @@
     bind = [
       "$mainMod, Q, killactive" # Close window
       "$mainMod, H, exit" # Exit Hyprland
-      "$mainMod, F, exec, ${pkgs.xfce.thunar}/bin/thunar" # Thunar
+      "$mainMod, F, exec, ${pkgs.pcmanfm}/bin/pcmanfm" # Thunar
       "$mainMod, V, togglefloating" # Toggle Floating
       "$mainMod, J, togglesplit" # Toggle Split
       "$mainMod, B, exec, zen" # Zen-browser
@@ -30,6 +30,7 @@
     bindm = [
       "$mod,mouse:272, movewindow" # Move Window (mouse)
       "$mod,mouse:273, resizewindow" # Resize Window (mouse)
+      "$mod,TAB, resizewindow" # Resize Window (mouse)
     ];
 
     bindl = [

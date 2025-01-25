@@ -1,6 +1,5 @@
 { config, pkgs, inputs, ... }: {
   imports = [
-  # ./hyprpanel/default.nix
     ./asuraLaptop/hyprland/default.nix
     ./asuraLaptop/hyprpanel/default.nix
     ./asuraLaptop/wofi/default.nix
@@ -15,7 +14,7 @@
   ];
 
     #git
-    programs.git = {
+  programs.git = {
       enable = true;
       userName = "Valo-Asura";
       userEmail = "vimalranghar016@gmail.com";
@@ -23,12 +22,12 @@
         init.defaultBranch = "main";
         safe.directory = "/etc/nixos/";
       };
-    };
+  };
   
 
-   home.pointerCursor = {
+  home.pointerCursor = {
     gtk.enable = true;
-    x11.enable = true;
+    #x11.enable = true;
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
     size = 16;

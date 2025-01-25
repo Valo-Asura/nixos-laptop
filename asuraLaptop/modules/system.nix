@@ -27,12 +27,13 @@
       waybar swaybg swww
       wlogout 
       xdg-utils swaylock kdePackages.qt6ct 
-      networkmanager ly # for login display manager tui ly
+      networkmanager libinput
       
       # Multimedia
       playerctl vlc
       firefox-wayland
       librewolf
+
       #for hyprpanel
         wireplumber
         libgtop
@@ -72,19 +73,17 @@
 };
 
 
-  #hyprland
-  #programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-  #programs.hyprland.enable = true;
- 
-  #login manager
-  services.displayManager.enable = true;
-  services.xserver = {
-    enable = true;
-    displayManager = {
-      gdm.enable = true;  # Use GDM as fallback
-    };
+services.xserver.libinput = {
+  enable = true;
+  touchpad = {
+    naturalScrolling = true;
+    # Use alternative properties
+    accelProfile = "flat";
+    middleEmulation = true;
+    tappingButtonMap = "lrm";
   };
-
+};
+ 
   #ags
   nixpkgs.overlays = [
     (final: prev:
@@ -129,7 +128,7 @@
   # Theming and Integration
    # Enable dark theme (GTK and Qt)
   environment.variables = {
-    GTK_THEME = "Adwaita-dark";
+    GTK_THEME = "Flat-Remix-GTK-Grey-Darkest";
     QT_QPA_PLATFORMTHEME = "qt6ct";
   };
   
@@ -157,7 +156,6 @@
     };
   };
 
-  #---------------------to bo declare ... ------------------#
   # Printing services
   services.printing.enable = true;
 
@@ -171,14 +169,6 @@
     pulse.enable = true;
   };
 
-  # Enable automatic login for user 'asura'
-  # services.displayManager.autoLogin.enable = true;
-  # services.displayManager.autoLogin.user = "asura";
-
-  # Fix for GNOME auto-login
-  systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@tty1".enable = false;
-
   # Install Firefox browser
   programs.firefox.enable = true;
 
@@ -188,7 +178,6 @@
   programs.ssh = {
     startAgent = true;
   };
-
 
   # Fonts configuration
   fonts.packages = with pkgs; [
@@ -202,8 +191,6 @@
   # NVIDIA driver configuration
   hardware.opengl = {
     enable = true;
-    #driSupport = true;
-    #driSupport32Bit = true;
   };
 
   nixpkgs.config.allowUnfreePredicate = pkg:

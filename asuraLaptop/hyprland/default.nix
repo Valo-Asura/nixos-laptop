@@ -15,7 +15,6 @@ in {
     ./animations.nix
     ./bindings.nix
     ./polkitagent.nix
-
   ];
 
   home.packages = with pkgs; [
@@ -145,7 +144,6 @@ in {
 
       input = {
         kb_layout = keyboardLayout;
-
         kb_options = "caps:escape";
         follow_mouse = 1;
         sensitivity = 0.5;
@@ -155,7 +153,8 @@ in {
 
         touchpad = {
           natural_scroll = true;
-          clickfinger_behavior = true;
+          tap_button_map = "lrm";  # Left-Right-Middle button mapping
+          clickfinger_behavior = false;
         };
       };
 
