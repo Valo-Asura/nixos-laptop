@@ -2,11 +2,11 @@
 { pkgs, config, inputs, ... }:
 let
   border-size = 1;
-  gaps-in = 0;
-  gaps-out = 0;
+  gaps-in = 2;
+  gaps-out = 6;
   active-opacity = 1;
   inactive-opacity = 0.89;
-  rounding = 0;
+  rounding = 8;
   blur = true;
   keyboardLayout = "us";
 in {

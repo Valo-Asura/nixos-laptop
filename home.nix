@@ -3,6 +3,7 @@
     ./asuraLaptop/hyprland/default.nix
     ./asuraLaptop/hyprpanel/default.nix
     ./asuraLaptop/wofi/default.nix
+    ./asuralaptop/scripts/screenshot.nix
   ];
 
   home.username = "asura";

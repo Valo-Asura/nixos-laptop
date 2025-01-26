@@ -28,7 +28,7 @@
       waybar swaybg swww
       wlogout 
       xdg-utils swaylock kdePackages.qt6ct 
-      networkmanager libinput
+      networkmanager #libinput
       
       # Multimedia
       playerctl vlc
@@ -44,18 +44,23 @@
         upower
         gvfs
         matugen
-        swappy
+        
       #optional hyprpanel
+        swappy
         power-profiles-daemon
         hyprsunset
         hypridle
         btop
         grimblast
+        gpu-screen-recorder
 
       #ags
       ags
       gtksourceview3
       bun
+      #test
+      fd
+      libnotify
       
       # Development
       vscode
@@ -76,16 +81,16 @@
 };
 
 
-services.xserver.libinput = {
-  enable = true;
-  touchpad = {
-    naturalScrolling = true;
-    # Use alternative properties
-    accelProfile = "flat";
-    middleEmulation = true;
-    tappingButtonMap = "lrm";
-  };
-};
+# services.xserver.libinput = {
+#   enable = true;
+#   touchpad = {
+#     naturalScrolling = true;
+#     # Use alternative properties
+#     accelProfile = "flat";
+#     middleEmulation = true;
+#     tappingButtonMap = "lrm";
+#   };
+# };
  
   #ags
   nixpkgs.overlays = [

@@ -4,9 +4,9 @@ let
 transparentButtons = false;
   accent = "#A594FD";           # Bright primary accent color
   accent-alt = "#45475A";       # Subtle secondary accent
-  background = "#0B0B0B";       # Dark background
+  background = "#0A0A0A";       # Dark background
   background-alt = "#1B1B1B";   # Slightly lighter alternative background
-  foreground = "#FCFCFC";
+  foreground = "#F0F0F0";
   rounding = 15;
   border-size = 3;
   gaps-out = 10 * 2;
