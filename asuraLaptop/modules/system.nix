@@ -11,6 +11,7 @@
       
       # Terminal
       kitty zsh superfile #fancy file manager
+      #fzf # fuzzy finder
       
       # System Tools
       polkit lxqt.lxqt-policykit
@@ -43,6 +44,7 @@
         upower
         gvfs
         matugen
+        swappy
       #optional hyprpanel
         power-profiles-daemon
         hyprsunset

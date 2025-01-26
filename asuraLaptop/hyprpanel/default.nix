@@ -38,6 +38,7 @@ in
             "network"
             "clock"
             "notifications"
+            "power"
           ];
         };
       };
@@ -47,9 +48,9 @@ in
       "theme.font.name" = "${font}";
       "theme.font.size" = "${fontSize}px";
       "theme.bar.outer_spacing" =
-        "${if floating && transparent then "0" else "8"}px";
+        "${if floating && transparent then "0" else "2"}px";
       "theme.bar.buttons.y_margins" =
-        "${if floating && transparent then "0" else "8"}px";
+        "${if floating && transparent then "0" else "2"}px";
       "theme.bar.buttons.spacing" = "0.3em";
       "theme.bar.buttons.radius" = "${
           if transparent then toString rounding else toString (rounding - 8)
@@ -92,7 +93,7 @@ in
       "menus.dashboard.powermenu.avatar.image" = "/home/asura/Pictures/wallhaven-qz7pz7_1920x1080.png";
       "menus.dashboard.powermenu.avatar.name" = "Asura";
       "wallpaper.enable" = "true";
-      "wallpaper.image" = "/home/asura/Pictures/wallhaven-m3jgm9_1920x1080.png";
+      "wallpaper.image" = "/home/asura/Pictures/wallhaven-o5oomm_2560x1440.png";
 
       "menus.dashboard.shortcuts.left.shortcut1.icon" = "";
       "menus.dashboard.shortcuts.left.shortcut1.command" = "zen";
@@ -176,7 +177,7 @@ in
       "bar.workspaces.applicationIconEmptyWorkspace" = "";
       "bar.workspaces.showApplicationIcons" = true;
       "bar.workspaces.showWsIcons" = true;
-      "theme.bar.dropdownGap" = "4.5em";
+      "theme.bar.dropdownGap" = "3.0em";
     };
   };
 }
