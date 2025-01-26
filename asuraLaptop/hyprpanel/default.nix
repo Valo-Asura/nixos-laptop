@@ -9,8 +9,8 @@ transparentButtons = false;
   foreground = "#F0F0F0";
   rounding = 15;
   border-size = 3;
-  gaps-out = 10 * 2;
-  gaps-in = 10;
+  gaps-out = 5 * 2;
+  gaps-in = 5;
   position = "top";
   floating = false;
   transparent = true;
@@ -90,10 +90,10 @@ in
       "menus.clock.weather.unit" = "metric";
       "menus.dashboard.powermenu.confirmation" = false;
 
-      "menus.dashboard.powermenu.avatar.image" = "/home/asura/Pictures/wallhaven-qz7pz7_1920x1080.png";
+      "menus.dashboard.powermenu.avatar.image" = "/home/asura/Pictures/avatar.png";
       "menus.dashboard.powermenu.avatar.name" = "Asura";
       "wallpaper.enable" = "true";
-      "wallpaper.image" = "/home/asura/Pictures/wallhaven-o5oomm_2560x1440.png";
+      "wallpaper.image" = "/home/asura/Pictures/wall.png";
 
       "menus.dashboard.shortcuts.left.shortcut1.icon" = "";
       "menus.dashboard.shortcuts.left.shortcut1.command" = "zen";
@@ -107,9 +107,9 @@ in
       "menus.dashboard.shortcuts.left.shortcut4.icon" = "";
       "menus.dashboard.shortcuts.left.shortcut4.command" = "menu";
       "menus.dashboard.shortcuts.left.shortcut4.tooltip" = "Search Apps";
-      "menus.dashboard.shortcuts.right.shortcut1.icon" = "";
-      "menus.dashboard.shortcuts.right.shortcut1.command" = "hyprpicker -a";
-      "menus.dashboard.shortcuts.right.shortcut1.tooltip" = "Color Picker";
+      # "menus.dashboard.shortcuts.right.shortcut1.icon" = "";
+      # "menus.dashboard.shortcuts.right.shortcut1.command" = "hyprpicker -a";
+      # "menus.dashboard.shortcuts.right.shortcut1.tooltip" = "Color Picker";
       "menus.dashboard.shortcuts.right.shortcut3.icon" = "󰄀";
       "menus.dashboard.shortcuts.right.shortcut3.command" =
         "screenshot region swappy";
