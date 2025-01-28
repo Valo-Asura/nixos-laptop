@@ -14,7 +14,6 @@
     hyprpanel
     wofi
     inputs.zen-browser.packages.${pkgs.system}.default
-    #xdg-desktop-portal-hyprland
   ];
 
   #git
