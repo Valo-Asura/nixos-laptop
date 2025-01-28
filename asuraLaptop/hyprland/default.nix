@@ -1,4 +1,4 @@
-# So best window tiling manager
+# good enough tiling manager
 { pkgs, config, inputs, ... }:
 let
   border-size = 1;
@@ -9,6 +9,7 @@ let
   rounding = 8;
   blur = true;
   keyboardLayout = "us";
+  border-color= "rgb(b4befe)";
 in {
 
   imports = [
@@ -38,6 +39,7 @@ in {
   
   wayland.windowManager.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.default;
     plugins = [
       pkgs.hyprlandPlugins.hyprexpo
     ];
@@ -106,6 +108,7 @@ in {
         border_size = border-size;
         border_part_of_window = true;
         layout = "master";
+        "col.active_border" = border-color;
       };
 
       decoration = {
