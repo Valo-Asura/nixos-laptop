@@ -34,7 +34,6 @@
         };
         modules = [
           ./asuraLaptop/system/default.nix
-
           home-manager.nixosModules.home-manager
           {
             nixpkgs.overlays = [ #for hyprpanel
