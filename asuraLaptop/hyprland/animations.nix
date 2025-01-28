@@ -7,7 +7,7 @@ let
   else if animationSpeed == "medium" then
     "2.5"
   else
-    "1.5";
+    "1";
   borderDuration = if animationSpeed == "slow" then
     "10"
   else if animationSpeed == "medium" then

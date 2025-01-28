@@ -5,6 +5,7 @@
     ./asuraLaptop/wofi/default.nix
     ./asuraLaptop/scripts/screenshot.nix
     ./asuraLaptop/scripts/nightShift.nix
+    ./asuraLaptop/tmux/tmux.nix
   ];
 
   home.username = "asura";
@@ -13,6 +14,7 @@
     hyprpanel
     wofi
     inputs.zen-browser.packages.${pkgs.system}.default
+    xdg-desktop-portal-hyprland
   ];
 
     #git
@@ -32,14 +34,14 @@
     #x11.enable = true;
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
-    size = 16;
+    size = 18;
   };
 
   gtk = {
     enable = true;
     theme = {
       package = pkgs.flat-remix-gtk;
-      name = "Flat-Remix-GTK-Grey-Darkest";
+      name = "Flat-Remix-GTK-Green-Dark";
     };
 
     iconTheme = {

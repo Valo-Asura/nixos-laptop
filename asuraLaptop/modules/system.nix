@@ -28,7 +28,7 @@
       waybar swaybg swww
       wlogout 
       xdg-utils swaylock kdePackages.qt6ct 
-      networkmanager #libinput
+      networkmanager
       
       # Multimedia
       playerctl vlc
@@ -80,18 +80,6 @@
     LD_LIBRARY_PATH = "/run/current-system/sw/lib";
 };
 
-
-# services.xserver.libinput = {
-#   enable = true;
-#   touchpad = {
-#     naturalScrolling = true;
-#     # Use alternative properties
-#     accelProfile = "flat";
-#     middleEmulation = true;
-#     tappingButtonMap = "lrm";
-#   };
-# };
- 
   #ags
   nixpkgs.overlays = [
     (final: prev:
@@ -136,14 +124,14 @@
   # Theming and Integration
    # Enable dark theme (GTK and Qt)
   environment.variables = {
-    GTK_THEME = "Flat-Remix-GTK-Grey-Darkest";
+    GTK_THEME = "Flat-Remix-GTK-Green-Dark";
     QT_QPA_PLATFORMTHEME = "qt6ct";
   };
   
   # Qt theme settings
   qt = {
     platformTheme = "qt6ct";
-    style = "Adwaita-dark";  
+    style = "gtk2";  
   };
   
   # Additional Services

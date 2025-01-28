@@ -18,9 +18,6 @@
       "input"      # Access input devices
       "power"
     ];
-    packages = with pkgs; [
-      # Add your user-specific packages here
-    ];
   };
 
   users.groups.asura = {};

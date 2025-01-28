@@ -37,7 +37,6 @@ in {
   ];
   
   wayland.windowManager.hyprland = {
-    #desktop = "Exec=dbus-launch --sh-syntax --exit-with-session Hyprland";
     enable = true;
     plugins = [
       pkgs.hyprlandPlugins.hyprexpo
@@ -114,8 +113,8 @@ in {
         inactive_opacity = inactive-opacity;
         rounding = rounding;
         shadow = {
-          enabled = true;
-          range = 20;
+          enabled = false;
+          range = 0;
           render_power = 3;
         };
         blur = { enabled = if blur then "true" else "false"; };
