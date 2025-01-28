@@ -33,12 +33,8 @@
           inherit hostname;
         };
         modules = [
-          ./asuraLaptop/modules/boot.nix
-          ./asuraLaptop/modules/system.nix
-          ./asuraLaptop/modules/users.nix
-          ./asuraLaptop/modules/locale.nix
-          ./asuraLaptop/modules/tuigreet.nix
-          ./hardware-configuration.nix
+          ./asuraLaptop/modules/default.nix
+
           home-manager.nixosModules.home-manager
           {
             nixpkgs.overlays = [ #for hyprpanel

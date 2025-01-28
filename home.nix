@@ -5,7 +5,7 @@
     ./asuraLaptop/wofi/default.nix
     ./asuraLaptop/scripts/screenshot.nix
     ./asuraLaptop/scripts/nightShift.nix
-    ./asuraLaptop/tmux/tmux.nix
+    #./asuraLaptop/tmux/tmux.nix
   ];
 
   home.username = "asura";
@@ -17,7 +17,7 @@
     xdg-desktop-portal-hyprland
   ];
 
-    #git
+  #git
   programs.git = {
       enable = true;
       userName = "Valo-Asura";
