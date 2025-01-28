@@ -33,7 +33,7 @@
           inherit hostname;
         };
         modules = [
-          ./asuraLaptop/modules/default.nix
+          ./asuraLaptop/system/default.nix
 
           home-manager.nixosModules.home-manager
           {
