@@ -14,7 +14,6 @@ in {
 
   programs.wofi = {
     enable = true;
-
     settings = {
       allow_markup = true;
       width = 600;
@@ -26,7 +25,7 @@ in {
       height = "205px";
       orientation = "vertical";
       halign = "fill";
-      line_wrap = "off";
+      line_wrap = "on";
       dynamic_lines = false;
       allow_images = true;
       image_size = 24;
@@ -70,10 +69,12 @@ in {
         }
 
         #scroll {
-          margin-top: 20px;
+          margin-top: 10px;
         }
 
-        #inner-box {}
+        #inner-box {
+          width : 600px;
+        }
 
         #img {
           padding-right: 8px;
