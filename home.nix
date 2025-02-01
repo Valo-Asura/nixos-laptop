@@ -11,6 +11,7 @@
   home.username = "asura";
 
   home.packages = with pkgs; [
+    home-manager
     hyprpanel
     wofi
     inputs.zen-browser.packages.${pkgs.system}.default
@@ -44,7 +45,7 @@
     };
 
     iconTheme = {
-      package = pkgs.gnome.adwaita-icon-theme;
+      package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
     };
 
