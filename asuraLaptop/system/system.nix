@@ -186,9 +186,7 @@
 
  
   # NVIDIA driver configuration
-  hardware.opengl = {
-    enable = true;
-  };
+  hardware.graphics.enable = true;
 
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem pkg [
