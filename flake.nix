@@ -22,6 +22,7 @@
       system = "x86_64-linux";
       hostname = "nixos";
       username = "asura";
+      stateVersion = "24.11";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {

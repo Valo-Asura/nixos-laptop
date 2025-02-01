@@ -5,9 +5,10 @@
   # system packages
   environment.systemPackages = with pkgs; [
     
-      home-manager
-      # Essential Utilities
-      fastfetch fzf
+      # home-manager
+
+      # beauty cosmitic
+      microfetch #sysinfo on terminal
       
       # Terminal
       kitty zsh superfile #fancy file manager
@@ -22,7 +23,7 @@
       xfce.thunar xfce.thunar-volman
       xfce.tumbler xarchiver
       shared-mime-info pcmanfm
-      gvfs ripgrep
+      gvfs ripgrep fzf
       
       # Desktop Environment
       waybar swaybg swww
@@ -80,7 +81,7 @@
     LD_LIBRARY_PATH = "/run/current-system/sw/lib";
 };
 
-  #ags
+  # #ags
   nixpkgs.overlays = [
     (final: prev:
     {

@@ -43,8 +43,6 @@ in {
     plugins = [
       pkgs.hyprlandPlugins.hyprexpo
     ];
-    
-
     xwayland.enable = true;  
     settings = {
       "$mod" = "SUPER";
